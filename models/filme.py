@@ -14,13 +14,18 @@ class Filme:
             return
         conexao = db.conectar_banco_de_dados()
         cursor = conexao.cursor()
-        cursor.execute(f'''
-        INSERT INTO filmes (titulo, genero, ano, avaliacao, assistindo) VALUES
-        ('{self.titulo}', '{self.genero}', {self.ano}, '{self.avaliacao}', '{self.assistindo}')''')
-        conexao.commit()
+        cursor.execute(f''' SELECT titulo FROM filmes WHERE titulo = '{self.titulo}' ''')
+        resultado = cursor.fetchone()
+        if resultado:
+            print('Este filme já foi cadastrado.')
+        else:
+            cursor.execute(f'''
+            INSERT INTO filmes (titulo, genero, ano, avaliacao, assistindo) VALUES
+            ('{self.titulo}', '{self.genero}', {self.ano}, '{self.avaliacao}', '{self.assistindo}')''')
+            conexao.commit()
+            print('Filme adicionado com sucesso!')
         cursor.close()
         conexao.close()
-        print('Filme adicionado com sucesso!')
 
     def atualizar(self, id_filme, opcao_atualizar, novo_atributo ):
         conexao = db.conectar_banco_de_dados()

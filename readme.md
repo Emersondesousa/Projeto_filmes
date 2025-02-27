@@ -18,7 +18,7 @@ básicas de CRUD (Create, Read, Update, Delete) para o gerenciamento de um banco
 
 #### 1 -- Abra o aquivo main.py;
 #### 2 -- Execute o código em Run Python File;
-#### 3 -- No terminal aparecerá o menu do programa;
+#### 3 -- O menu do programa será exibido no terminal;
 #### 4 -- As funções do programa estão enumeradas;
 #### 5 -- Digite a opção desejada e divirta-se!
 

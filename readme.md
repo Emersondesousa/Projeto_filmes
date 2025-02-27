@@ -20,7 +20,7 @@ básicas de CRUD (Create, Read, Update, Delete) para o gerenciamento de um banco
 #### 2 -- Execute o código em Run Python File;
 #### 3 -- No terminal aparecerá o menu do programa;
 #### 4 -- As funções do programa estão enumeradas;
-#### 5 -- Digite a opção desejada e se divirta!
+#### 5 -- Digite a opção desejada e divirta-se!
 
 # Estrutura de pastas
 Projeto_filmes - Database / db.py - Models / filme.py - Services / filme_services.py - main.py - requirements.txt 
